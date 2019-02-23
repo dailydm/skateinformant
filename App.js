@@ -1,7 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NativeModules, Text, View } from 'react-native';
+import { Acrcloud } from './src/libs/native_modules';
+//let Acrcloud = NativeModules.Acrcloud;
+
+import styles from './src/themes/ApplicationStyles';
 
 export default class App extends React.Component {
+  componentDidMount() {
+    Acrcloud.initACRCloud(
+      {
+        host: 'xxx',
+        accessKey: 'xxx',
+        accessSecret: 'xxx',
+      },
+      error => {
+        console.log(`Error: ${error}`);
+      }
+    );
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -10,12 +27,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

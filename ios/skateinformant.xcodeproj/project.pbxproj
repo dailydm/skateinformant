@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		441580333F444189912B819D /* libACRCloudBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6935BFCEEA0451EB306DA79 /* libACRCloudBridge.a */; };
+		388055ABC83B49ABA9C075FA /* libRNAcrcloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7BAC8D6B78405A82CD8227 /* libRNAcrcloud.a */; };
 		B501732B1DC01252003445D9 /* EXShell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B501732A1DC01252003445D9 /* EXShell.plist */; };
 		B56386491DB9693800A0598C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B56386481DB9693800A0598C /* AppDelegate.m */; };
 		B56386511DB9693800A0598C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56386501DB9693800A0598C /* Assets.xcassets */; };
@@ -23,16 +23,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		63D8752E221CE5BD00B29BF3 /* PBXContainerItemProxy */ = {
+		63B6FE7C2221067000FADD83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B942E0E4FCD24D74B9F32942 /* ACRCloudBridge.xcodeproj */;
+			containerPortal = 1E40F972AD3F4A999FEDBB44 /* RNAcrcloud.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = ACRCloudBridge;
+			remoteInfo = RNAcrcloud;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E40F972AD3F4A999FEDBB44 /* RNAcrcloud.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAcrcloud.xcodeproj; path = "../node_modules/react-native-acrcloud/ios/RNAcrcloud.xcodeproj"; sourceTree = "<group>"; };
 		2C1548D9E4CB1AEFA5CCAE6D /* Pods-skateinformant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skateinformant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-skateinformant/Pods-skateinformant.debug.xcconfig"; sourceTree = "<group>"; };
 		A47FE4D7F70906B7DC8CE39B /* Pods-skateinformant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skateinformant.release.xcconfig"; path = "Pods/Target Support Files/Pods-skateinformant/Pods-skateinformant.release.xcconfig"; sourceTree = "<group>"; };
 		A6935BFCEEA0451EB306DA79 /* libACRCloudBridge.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libACRCloudBridge.a; sourceTree = "<group>"; };
@@ -50,7 +51,7 @@
 		B5CFBF4E1EDE419400B4BE24 /* EXBuildConstants.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EXBuildConstants.plist; sourceTree = "<group>"; };
 		B5DB047E1F3A684600E91581 /* shell-app-manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "shell-app-manifest.json"; sourceTree = "<group>"; };
 		B5DB047F1F3A684600E91581 /* shell-app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shell-app.bundle"; sourceTree = "<group>"; };
-		B942E0E4FCD24D74B9F32942 /* ACRCloudBridge.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ACRCloudBridge.xcodeproj; path = "../node_modules/react-native-acrcloud/ios/ACRCloudBridge.xcodeproj"; sourceTree = "<group>"; };
+		BC7BAC8D6B78405A82CD8227 /* libRNAcrcloud.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNAcrcloud.a; sourceTree = "<group>"; };
 		C4A88D15726AD99E8A257BC7 /* libPods-skateinformant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-skateinformant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,7 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB8117C1BFA0514F79CAF74 /* libPods-skateinformant.a in Frameworks */,
-				441580333F444189912B819D /* libACRCloudBridge.a in Frameworks */,
+				388055ABC83B49ABA9C075FA /* libRNAcrcloud.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,26 +85,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		63B6FE792221067000FADD83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63B6FE7D2221067000FADD83 /* libRNAcrcloud.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		63D8752A221CE5BC00B29BF3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				A6935BFCEEA0451EB306DA79 /* libACRCloudBridge.a */,
+				BC7BAC8D6B78405A82CD8227 /* libRNAcrcloud.a */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		63D8752B221CE5BD00B29BF3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				63D8752F221CE5BD00B29BF3 /* libACRCloudBridge.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		7A5C973D76154B11864BB50D /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				B942E0E4FCD24D74B9F32942 /* ACRCloudBridge.xcodeproj */,
+				1E40F972AD3F4A999FEDBB44 /* RNAcrcloud.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -209,8 +211,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 63D8752B221CE5BD00B29BF3 /* Products */;
-					ProjectRef = B942E0E4FCD24D74B9F32942 /* ACRCloudBridge.xcodeproj */;
+					ProductGroup = 63B6FE792221067000FADD83 /* Products */;
+					ProjectRef = 1E40F972AD3F4A999FEDBB44 /* RNAcrcloud.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -221,11 +223,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		63D8752F221CE5BD00B29BF3 /* libACRCloudBridge.a */ = {
+		63B6FE7D2221067000FADD83 /* libRNAcrcloud.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libACRCloudBridge.a;
-			remoteRef = 63D8752E221CE5BD00B29BF3 /* PBXContainerItemProxy */;
+			path = libRNAcrcloud.a;
+			remoteRef = 63B6FE7C2221067000FADD83 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -454,6 +456,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skateinformant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,6 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skateinformant;
