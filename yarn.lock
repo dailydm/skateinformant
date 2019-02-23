@@ -5392,7 +5392,7 @@ react-is@^16.8.1:
 
 react-native-acrcloud@../local_packages/react-native-acrcloud-v1.0.0.tgz:
   version "1.0.0"
-  resolved "../local_packages/react-native-acrcloud-v1.0.0.tgz#c3329e67d6072487b223d1e346b7b8f7ff101a5b"
+  resolved "../local_packages/react-native-acrcloud-v1.0.0.tgz#a1cf9e8c36034d6f157eaf752720b7e120a6720b"
 
 react-native-branch@2.2.5:
   version "2.2.5"

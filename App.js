@@ -1,6 +1,6 @@
 import React from 'react';
-import { NativeModules, Text, View } from 'react-native';
-import { Acrcloud } from './src/libs/native_modules';
+import { Text, View } from 'react-native';
+import Acrcloud from './src/libs/native_modules';
 
 import styles from './src/themes/ApplicationStyles';
 
@@ -8,9 +8,9 @@ export default class App extends React.Component {
   componentDidMount() {
     Acrcloud.initACRCloud(
       {
-        host: 'xxx',
-        accessKey: 'xxx',
-        accessSecret: 'xxx',
+        host: 'identify-us-west-2.acrcloud.com',
+        accessKey: 'e0d894343af60d9072c00a7da7488e09',
+        accessSecret: 'NRCM0LZhBM9P9BRpDrCBsLOOGDam6RsDRDq7wMIK',
       },
       error => {
         console.log(`Error: ${error}`);
