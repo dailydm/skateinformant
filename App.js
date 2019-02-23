@@ -1,7 +1,6 @@
 import React from 'react';
 import { NativeModules, Text, View } from 'react-native';
 import { Acrcloud } from './src/libs/native_modules';
-//let Acrcloud = NativeModules.Acrcloud;
 
 import styles from './src/themes/ApplicationStyles';
 
