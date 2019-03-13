@@ -4,7 +4,7 @@ import { Permissions } from 'expo';
 
 import Acrcloud from '../Lib/NativeModules';
 import AudioComponent from '../Components/SongRecognizer';
-
+import Api from '../Lib/Api';
 // import styles from './src/themes/ApplicationStyles';
 
 export default class MainScreen extends React.Component {
@@ -49,35 +49,25 @@ export default class MainScreen extends React.Component {
       this.setState({ songs: response.metadata.music });
 
       let song = response.metadata.music[0];
-      console.log('song: ', song);
-
-      fetch('http://localhost:3000/video_parts/search', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/vnd.skateinformant.com; version=1',
-          'Content-Type': 'application/json',
+      let params = {
+        song: {
+          acrid: song.acrid,
+          artist: song.artists[0].name,
+          title: song.title,
         },
-        body: JSON.stringify({
-          song: {
-            acrid: song.acrid,
-            artist: song.artists[0].name,
-            title: song.title,
-          },
-        }),
-      })
-        .then(result => result.json())
-        .then(
-          result => {
-            console.log(result);
-            navigation.navigate('Result', {
-              songs: this.state.songs,
-              videoParts: result,
-            });
-          },
-          error => {
-            console.log('whomp whomp');
-          }
-        );
+      };
+
+      Api.post('/video_parts/search', params)
+        .then(resp => {
+          console.log(resp);
+          navigation.navigate('Result', {
+            songs: this.state.songs,
+            videoParts: resp,
+          });
+        })
+        .catch(ex => {
+          console.log(ex);
+        });
     } else {
       console.log('big problems');
     }
