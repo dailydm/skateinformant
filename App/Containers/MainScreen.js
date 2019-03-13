@@ -27,6 +27,7 @@ export default class MainScreen extends React.Component {
 
     this.state = {
       haveRecordingPermissions: false,
+      songs: [],
     };
   }
 
@@ -38,9 +39,51 @@ export default class MainScreen extends React.Component {
   }
 
   async recognizeSong() {
+    const { navigation } = this.props;
     console.log('Starting recognition');
-    let song = await Acrcloud.startRecognition();
-    console.log('Results are in! ', song);
+
+    let response = await Acrcloud.startRecognition();
+    response = response[0];
+
+    if (response.status.code === 0) {
+      this.setState({ songs: response.metadata.music });
+
+      let song = response.metadata.music[0];
+      console.log('song: ', song);
+
+      fetch('http://localhost:3000/video_parts/search', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/vnd.skateinformant.com; version=1',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          song: {
+            acrid: song.acrid,
+            artist: song.artists[0].name,
+            title: song.title,
+          },
+        }),
+      })
+        .then(result => result.json())
+        .then(
+          result => {
+            console.log(result);
+            navigation.navigate('Result', {
+              songs: this.state.songs,
+              videoParts: result,
+            });
+          },
+          error => {
+            console.log('whomp whomp');
+          }
+        );
+    } else {
+      console.log('big problems');
+    }
+
+    // navigation.navigate('Result', { songs });
+    //console.log('Results are in! ', song);
   }
 
   handleStart() {
