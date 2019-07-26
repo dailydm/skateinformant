@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import wrappedScreen from './Application';
 import styles from '../themes/Application';
 
-export default class Main extends React.Component {
+const Main = () => (
+  <View>
+    <Text>Main Screen Bitch!</Text>
+  </View>
+);
 
-  render() {
-    return (
-      <View style={styles.applicationView}>
-        <Text>Main Screen Bitch!</Text>
-      </View>
-    );
-  }
-}
+export default wrappedScreen(Main);
