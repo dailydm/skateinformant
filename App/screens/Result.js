@@ -3,10 +3,10 @@ import { Text, View } from 'react-native';
 
 import wrappedScreen from './AppScreen';
 
-const ResultScreen = () => (
+const Result = () => (
   <View>
     <Text>Result Screen Bitch!</Text>
   </View>
 );
 
-export default wrappedScreen(ResultScreen);
+export default wrappedScreen(Result);

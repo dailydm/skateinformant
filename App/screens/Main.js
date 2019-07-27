@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ListenButton from '../components/ListenButton';
 import wrappedScreen from './AppScreen';
 
-class MainScreen extends Component {
+class Main extends Component {
   static navigationOptions = {
     header: null,
   };
@@ -10,10 +11,10 @@ class MainScreen extends Component {
   render() {
     return(
       <View>
-        <Text>Main Screen Bitch!</Text>
+        <ListenButton />
       </View>
     );
   }
 }
 
-export default wrappedScreen(MainScreen);
+export default wrappedScreen(Main);
