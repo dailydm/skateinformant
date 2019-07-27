@@ -1,15 +1,15 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-import Main from './screens/Main';
-import Result from './screens/Result';
+import MainScreen from './screens/MainScreen';
+import ResultScreen from './screens/ResultScreen';
 
 const AppNavigation = createStackNavigator(
   {
-    Main,
-    Result,
+    MainScreen,
+    ResultScreen,
   },
   {
-    initialRouteName: 'Main',
+    initialRouteName: 'MainScreen',
   },
 );
 

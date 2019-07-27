@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
+import hoistNonReactStatics from 'hoist-non-react-statics';
+
 import OfflineNotice from '../components/OfflineNotice';
 import styles from '../themes/Application';
 
@@ -8,7 +10,7 @@ import styles from '../themes/Application';
 // messages, and anything else that are common to all
 // the screens of the application
 const wrappedScreen = WrappedComponent => {
-  class ApplicationScreen extends Component {
+  class AppScreen extends Component {
     render() {
       return (
         <View style={styles.applicationView}>
@@ -18,7 +20,8 @@ const wrappedScreen = WrappedComponent => {
       );
     }
   }
-  return ApplicationScreen;
+  hoistNonReactStatics(AppScreen, WrappedComponent);
+  return AppScreen;
 }
 
 export default wrappedScreen;

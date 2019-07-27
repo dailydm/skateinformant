@@ -1,13 +1,13 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-import wrappedScreen from './Application';
+import wrappedScreen from './AppScreen';
 import styles from '../themes/Application';
 
-const Result = () => (
+const ResultScreen = () => (
   <View>
     <Text>Result Screen Bitch!</Text>
   </View>
 );
 
-export default wrappedScreen(Result);
+export default wrappedScreen(ResultScreen);
