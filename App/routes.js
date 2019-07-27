@@ -9,7 +9,6 @@ const AppNavigation = createStackNavigator(
     Result,
   },
   {
-    //initialRouteName: 'Main',
     initialRouteName: 'Main',
   },
 );

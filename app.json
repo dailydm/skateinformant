@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "SkateInformant",
-    "slug": "skateinformant.com",
+    "slug": "skateinformant",
     "privacy": "public",
     "sdkVersion": "33.0.0",
     "platforms": [

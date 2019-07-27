@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-
+import OfflineNotice from '../components/OfflineNotice';
 import styles from '../themes/Application';
 
 // This is a HOC that takes a screen and
@@ -12,6 +12,7 @@ const wrappedScreen = WrappedComponent => {
     render() {
       return (
         <View style={styles.applicationView}>
+          <OfflineNotice />
           <WrappedComponent {...this.props} />
         </View>
       );
