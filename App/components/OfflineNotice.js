@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
-import { View, Text, NetInfo, StyleSheet, Dimensions } from 'react-native';
-
-const { width } = Dimensions.get('window');
+import { View, Text, NetInfo } from 'react-native';
+import styles from '../styles/components/OfflineNotice';
 
 const OfflineBanner = () => (
   <View style={styles.offlineContainer}>
@@ -35,17 +34,3 @@ export default class OfflineNotice extends PureComponent {
     return null;
   }
 }
-
-const styles = StyleSheet.create({
-  offlineContainer: {
-    backgroundColor: '#b52424',
-    height: 30,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-    width,
-    position: 'absolute',
-    top: 30
-  },
-  offlineText: { color: '#fff' }
-});

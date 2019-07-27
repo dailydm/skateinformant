@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
 import OfflineNotice from '../components/OfflineNotice';
-import styles from '../themes/Application';
+import styles from '../styles/Application';
 
 // This is a HOC that takes a screen and
 // wraps it with the application styles, error

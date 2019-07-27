@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
 import wrappedScreen from './AppScreen';
-import styles from '../themes/Application';
 
 class MainScreen extends Component {
-
   static navigationOptions = {
     header: null,
   };
