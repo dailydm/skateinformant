@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native'
 
-import AppNavigation from './routes';
+import AppNavigation from './navigation';
 
 const App = () => (
   <AppNavigation />
