@@ -14,8 +14,11 @@ class Main extends PureComponent {
   async recognizeSongAsync() {
     const { status, permissions } = await Permissions.askAsync(Permissions.AUDIO_RECORDING);
     if ( status === "granted" ) {
-      // TODO fixxx
-      new SongRecognizer().startRecognition();
+
+      let song = await SongRecognizer.startRecognitionAsync();
+
+      console.log(song);
+
     } else {
       console.log('No Permissions Yet');
     }
